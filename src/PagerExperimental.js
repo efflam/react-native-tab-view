@@ -49,9 +49,9 @@ export default class PagerExperimental<T: *> extends React.Component<Props<T>> {
     const { GestureHandler } = this.props;
 
     if (event.nativeEvent.state === GestureHandler.State.BEGIN) {
-      this.props.onSwipeStart && this.props.onSwipeStart();
+      this.props.onSwipeStart && this.props.onSwipeStart(event);
     } else if (event.nativeEvent.state === GestureHandler.State.END) {
-      this.props.onSwipeEnd && this.props.onSwipeEnd();
+      this.props.onSwipeEnd && this.props.onSwipeEnd(event);
 
       const {
         navigationState,
